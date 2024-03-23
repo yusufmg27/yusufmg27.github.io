@@ -10,14 +10,15 @@
       background-image: url('assets/mountain.jpg');
       background-size: cover;
       background-repeat: no-repeat;
+      background-attachment: fixed;
     }
     
     .container {
-      background-color: black;
+      background-color: white;
       border-radius: 50px;
-      padding-top: 5px;
-      padding-bottom: 5px;
       animation: slideIn 2s forwards;
+      max-width: calc(100% - 20px);
+      margin-top: 15px !important;
     }
     
     @keyframes slideIn {
@@ -32,16 +33,31 @@
     }
     
     .container > * {
-      margin-left: 50px;
-      margin-right: 50px;
+      margin-left: 25px;
+      margin-right: 25px;
     }
     
     .navbar-brand {
       font-size: 27px !important;
     }
     
+    .navbar-nav {
+      gap: 10px;
+    }
+    
+    .navbar-toggler {
+      border-radius: 30px !important;
+    }
+    
     .nav-link {
       font-size: 17px !important;
+    }
+    
+    @media (min-width: 576px) {
+      .container {
+        max-width: 540px;
+        margin-top: 40px !important;
+      }
     }
     
   </style>
@@ -52,23 +68,23 @@
 </head>
 <body>
   <!-- navbar -->
-  <div class="container mt-5 shadow-lg">
+  <div class="container shadow-lg">
     <nav class="navbar navbar-expand-sm">
       <div class="container-fluid">
-        <a class="navbar-brand text-white" href="https://www.instagram.com/yusufmg27"><b>Yusuf.</b></a>
+        <a class="navbar-brand" href="https://www.instagram.com/yusufmg27"><b>Yusuf.</b></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav text-white ms-auto" style="gap: 40px;">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link text-white" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#"><b>Home</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#">Home</a>
+              <a class="nav-link" href="#"><b>Home</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#">Home</a>
+              <a class="nav-link" href="#"><b>Home</b></a>
             </li>
           </ul>
         </div>
